@@ -31,3 +31,7 @@ a {
 p {
   text-align: left;
 }
+
+#banana {
+  text-align: right;
+}

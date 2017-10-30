@@ -21,11 +21,13 @@
 
 .header-container {
   background-color: #5390f4;
-  padding: 10px 0 0 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10px 10px 10px;
 }
 
 .title {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
   font-family: geneva; sans-serif;
 }
@@ -37,3 +39,44 @@
 .main-content {
   font-size: 1em;
 }
+
+.layout-container {
+  background-color: #97bcfc;
+  padding: 10px 10px 10px 10px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.features-list > li {
+  display: inline;
+}
+
+.features-menu li {
+  list-style: none;
+  
+}
+
+.layout-header,
+.people-header {
+  font-size: 2em;
+}
+
+.people-container {
+  background-color: #cadbf7;
+  display: flex;
+}
+
+.image {
+  float: right;
+}
+
+.layout-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.

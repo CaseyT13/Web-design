@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -27,8 +26,8 @@ body {
 }
 
 .title {
-  font-family: Arial; sans-serif;
-  font-size: 3em;
+  font-family: Courier; sans-serif;
+  font-size: 4em;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -100,14 +99,18 @@ list-style: none;
 
 .features-menu {
   color: #fff;
-background-color: #7e099b;
-font-weight: bold;
-padding: 10px;
-text-align: center;
-border: 2px solid #161516;
-border-radius: 2px;
+  background-color: #7e099b;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #161516;
+  border-radius: 2px;
 
-width: 150px;
-box-sizing: border-box;
-margin: 10px auto;
+  width: 150px;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+
+#image {
+  padding: 10px 5px 0 0;
 }

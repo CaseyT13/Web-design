@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<!-- original code copied from from: https://github.com/jay3dec/MultiLineChart_D3/blob/master/index.html --> 
+<!-- original code copied from from: https://github.com/jay3dec/MultiLineChart_D3/blob/master/index.html -->
 <head>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -32,42 +32,42 @@
             <script>
                 function InitChart() {
                     var data = [{
-                        "sale": "202",
-                        "year": "2000"
-                    }, {
-                        "sale": "215",
-                        "year": "2002"
-                    }, {
-                        "sale": "179",
-                        "year": "2004"
-                    }, {
-                        "sale": "199",
-                        "year": "2006"
-                    }, {
-                        "sale": "134",
-                        "year": "2008"
-                    }, {
-                        "sale": "176",
+                        "sale": "50372",
                         "year": "2010"
+                    }, {
+                        "sale": "52400",
+                        "year": "2011"
+                    }, {
+                        "sale": "59100",
+                        "year": "2012"
+                    }, {
+                        "sale": "57400",
+                        "year": "2013"
+                    }, {
+                        "sale": "50900",
+                        "year": "2014"
+                    }, {
+                        "sale": "67560",
+                        "year": "2015"
                     }];
                     var data2 = [{
-                        "sale": "152",
-                        "year": "2000"
-                    }, {
-                        "sale": "189",
-                        "year": "2002"
-                    }, {
-                        "sale": "179",
-                        "year": "2004"
-                    }, {
-                        "sale": "199",
-                        "year": "2006"
-                    }, {
-                        "sale": "134",
-                        "year": "2008"
-                    }, {
-                        "sale": "176",
+                        "sale": "648",
                         "year": "2010"
+                    }, {
+                        "sale": "816",
+                        "year": "2011"
+                    }, {
+                        "sale": "1042",
+                        "year": "2012"
+                    }, {
+                        "sale": "1351",
+                        "year": "2013"
+                    }, {
+                        "sale": "1505",
+                        "year": "2014"
+                    }, {
+                        "sale": "2932",
+                        "year": "2015"
                     }];
                     var vis = d3.select("#visualisation"),
                         WIDTH = 1000,
@@ -78,8 +78,8 @@
                             bottom: 20,
                             left: 50
                         },
-                        xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2000, 2010]),
-                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([134, 215]),
+                        xScale = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([2010, 2015]),
+                        yScale = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([648, 67560]),
                         xAxis = d3.svg.axis()
                         .scale(xScale),
                         yAxis = d3.svg.axis()

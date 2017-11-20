@@ -9,16 +9,28 @@
       google.charts.load('current', {'packages':['corechart']});
 
       // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawVisualization);
 
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
-      function drawChart() {
+      function drawVisualization() {
+
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1tL94fYN1IA3ojRN2WkVkQDp0MVaavKcok_Dho4113BU/edit#gid=0',
+          query: 'select'
+          options: {'title': 'Dollars Spent per Year'},
+          containerID: 'vis_div'
+          
+        })
 
         // Create the data table.
-        var data = new google.visualization.arrayToDataTable();
-          ['Year', 'Dollars Per Person', 'Total Dollar (in Billions)']
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Year');
+        data.addColumn('number', 'Dollars per Person');
+        data.addColumn('number', 'Total Dollars (in billions)');
+        data.addRows([
           [2005,  734.69,      496.2],
           [2006,  750.70,      512.6],
           [2007,  755.13,      525.9],

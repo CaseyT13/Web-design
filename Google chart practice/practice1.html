@@ -17,19 +17,25 @@
       function drawChart() {
 
         // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
+        var data = new google.visualization.arrayToDataTable();
+          ['Year', 'Dollars Per Person', 'Total Dollar (in Billions)']
+          [2005,  734.69,      496.2],
+          [2006,  750.70,      512.6],
+          [2007,  755.13,      525.9],
+          [2008,  694.19,      501.7]
+          [2009,  681.83,      503.2]
+          [2010,  718.98,      529.4]
+          [2011,  740.57,      553.8]
+          [2012,  752.24,      568.7]
+          [2013,  767.24,      584.1]
+          [2014,  802.45,      608.0]
+          [2015,  805.65,      626.1]
+          [2016,  935.58,      626.1]
+          [2017,  967.13,      682.0]
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':'Holiday Shopping per Year',
                        'width':400,
                        'height':300};
 

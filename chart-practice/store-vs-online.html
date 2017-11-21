@@ -3,7 +3,15 @@
 <!-- must include MIT license; source: http://www.chartjs.org/docs/latest/getting-started/ -->
 <head>
     <title>Line Chart</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="./utils.js"></script>
+    <style>
+    canvas{
+       -moz-user-select: none;
+       -webkit-user-select: none;
+       -ms-user-select: none;
+    }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
 </head>
 <body>
     <div style="width:75%;">
@@ -11,7 +19,7 @@
     </div>
     <br>
     <br>
-    <button id="In Store">In Store</button>
+    <button id="In-Store">In-Store</button>
     <button id="Online">Online</button>
     <button id="Per Person">Per Person</button>
     <button id="removeDataset">Remove Dataset</button>
@@ -48,7 +56,12 @@
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Dollars'
+                            labelString: 'Dollars (Billions)'
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          min: 0,
+                          max: 70,
                         }
                     }]
                 }
@@ -61,11 +74,11 @@
         };
 
         var colorNames = Object.keys(window.chartColors);
-        document.getElementById('In Store').addEventListener('click', function() {
+        document.getElementById('In-Store').addEventListener('click', function() {
             var colorName = colorNames[config.data.datasets.length % colorNames.length];
             var newColor = window.chartColors[colorName];
             var newDataset = {
-                label: 'In Store Spending' + config.data.datasets.length,
+                label: 'In-Store Spending',
                 backgroundColor: newColor,
                 borderColor: newColor,
                 data: [
@@ -79,10 +92,6 @@
                 fill: false
             };
 
-            for (var index = 0; index < config.data.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
-
             config.data.datasets.push(newDataset);
             window.myLine.update();
         });
@@ -93,7 +102,7 @@
             var colorName = colorNames[config.data.datasets.length % colorNames.length];
             var newColor = window.chartColors[colorName];
             var newDataset = {
-                label: 'Online Spending' + config.data.datasets.length,
+                label: 'Online Spending',
                 backgroundColor: newColor,
                 borderColor: newColor,
                 data: [
@@ -107,10 +116,6 @@
                 fill: false
             };
 
-            for (var index = 0; index < config.data.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
-
             config.data.datasets.push(newDataset);
             window.myLine.update();
         });
@@ -120,7 +125,7 @@
             var colorName = colorNames[config.data.datasets.length % colorNames.length];
             var newColor = window.chartColors[colorName];
             var newDataset = {
-                label: 'Per-person Spending' + config.data.datasets.length,
+                label: 'Per-person Spending',
                 backgroundColor: newColor,
                 borderColor: newColor,
                 data: [
@@ -133,10 +138,6 @@
                 ],
                 fill: false
             };
-
-            for (var index = 0; index < config.data.labels.length; ++index) {
-                newDataset.data.push(randomScalingFactor());
-            }
 
             config.data.datasets.push(newDataset);
             window.myLine.update();

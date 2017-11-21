@@ -10,21 +10,6 @@ window.chartColors = {
 	grey: 'rgb(201, 203, 207)'
 };
 
-(function(global) {
-	var Months = [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	];
 
 	var COLORS = [
 		'#4dc9f6',

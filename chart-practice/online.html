@@ -2,7 +2,7 @@
 <html>
 <!-- must include MIT license; source: http://www.chartjs.org/docs/latest/getting-started/ -->
 <head>
-    <title>Per-Person Black Friday Spending</title>
+    <title>Online Black Friday Spending</title>
     <script src="./utils.js"></script>
     <style>
     canvas{
@@ -26,16 +26,16 @@
             data: {
                 labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
                 datasets: [{
-                    label: "Per-Person Spending",
-                    backgroundColor: window.chartColors.red,
-                    borderColor: window.chartColors.red,
+                    label: "Online Spending",
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
                     data: [
-                      365,
-                      398,
-                      423,
-                      407.23,
-                      380.95,
-                      403.35
+                      648,
+                      816,
+                      1042,
+                      1351,
+                      1505,
+                      2932
                     ],
                     fill: false,
                   }]
@@ -66,13 +66,12 @@
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Dollars'
+                            labelString: 'Dollars (Millions)'
                         },
                         ticks: {
                           beginAtZero: true,
-                          min: 360,
-                          max: 440,
-
+                          min: 600,
+                          max: 3000,
                         }
                     }]
                 }

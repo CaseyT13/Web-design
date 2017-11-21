@@ -2,7 +2,7 @@
 <html>
 <!-- must include MIT license; source: http://www.chartjs.org/docs/latest/getting-started/ -->
 <head>
-    <title>Per-Person Black Friday Spending</title>
+    <title>In-Store Black Friday Spending</title>
     <script src="./utils.js"></script>
     <style>
     canvas{
@@ -17,7 +17,6 @@
     <div style="width:75%;">
         <canvas id="canvas"></canvas>
     </div>
-    <br>
 
     <script>
         var MONTHS = ["2010", "2011", "2012", "2013", "2014", "2015"];
@@ -26,19 +25,19 @@
             data: {
                 labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
                 datasets: [{
-                    label: "Per-Person Spending",
-                    backgroundColor: window.chartColors.red,
-                    borderColor: window.chartColors.red,
-                    data: [
-                      365,
-                      398,
-                      423,
-                      407.23,
-                      380.95,
-                      403.35
-                    ],
-                    fill: false,
-                  }]
+                label: "In-Store Spending",
+                backgroundColor: window.chartColors.purple,
+                borderColor: window.chartColors.purple,
+                data: [
+                  50.372,
+                  52.4,
+                  59.1,
+                  57.4,
+                  50.9,
+                  67.56
+                ],
+                fill: false,
+              }]
             },
             options: {
                 responsive: true,
@@ -66,13 +65,12 @@
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Dollars'
+                            labelString: 'Dollars (Billions)'
                         },
                         ticks: {
                           beginAtZero: true,
-                          min: 360,
-                          max: 440,
-
+                          min: 50,
+                          max: 70,
                         }
                     }]
                 }
@@ -83,6 +81,7 @@
             var ctx = document.getElementById("canvas").getContext("2d");
             window.myLine = new Chart(ctx, config);
         };
+
 
     </script>
 </body>

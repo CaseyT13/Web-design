@@ -1,0 +1,31 @@
+
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var wrapper = new google.visualization.LineChart();
+        data.addColumn('number', 'Year')
+        data.addColumn('number', 'In-store Spending')
+        data.addColumn('number', 'Online Spending')
+        data.addColumn('number', 'Per-person Spending')
+        data.addRows([
+          [2015,	67560000000,	2932000000,	403.35],
+          [2014,	50900000000,	1505000000,	380.95],
+          [2013,	57400000000,  1351000000,	407.23],
+          [2012,	59100000000,	1042000000,	423],
+          [2011,	52400000000,	816000000,	398],
+          [2010,	50372000000,	648000000,	365]
+        ]);
+
+        var chart = new google.visualization.LineChart(document.getElementById('line-chart'));
+        chart.draw(data, null);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="line-chart" style="width: 600px; height: 400px;"></div>
+  </body>

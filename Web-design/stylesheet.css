@@ -2,10 +2,15 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  flex-direction: column;
 }
 
 body {
-  background-color: #5390f4;
+  background-color: #cadbf7;
+  margin: 0 auto;
+  max-width: 80em;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -18,30 +23,21 @@ body {
   }
 }
 
-.header-container {
-  background-color: #5390f4;
-  display: flex;
-  justify-content: center;
-  padding: 40px 10px 10px 10px;
-  flex-wrap: wrap;
+}
+.header-items {
+  max-width: 90em;
 }
 
 .title {
   font-family: Courier; sans-serif;
-  font-size: 4.2em;
+  font-size: 3em;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  order: 3;
-  margin: 10px;
+  top: auto;
 }
 
 .main-question {
-  font-size: 2em;
-  display: flex;
-  justify-content: center;
+  font-size: 1.75em;
   padding-top: 20px;
-  order: 1;
   margin-top: 40px;
 }
 
@@ -50,11 +46,10 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-  order: 2;
-}
 
- a {
-   margin-left: 10px;
+}
+ a:link {
+   color: #e8effc;
  }
 
 a:link,
@@ -66,8 +61,8 @@ a:hover {
   color: #e8effc;
 }
 
-.layout-container {
-  background-color: #cadbf7;
+.layout {
+  background-color: #5390f4;
   display: flex;
   justify-content: center;
   padding: 0 10px 10px 10px;
@@ -77,8 +72,8 @@ a:hover {
 list-style: none;
 }
 
-.layout-header,
-.people-header {
+.layout,
+.people {
   font-size: 2em;
   font-weight: bold;
   padding: 20px 0 20px 0;
@@ -89,8 +84,8 @@ list-style: none;
   padding: 20px 0 20px 10PX;
 }
 
-.people-container {
-  background-color: #cadbf7;
+.people {
+  background-color: #5390f4;
   display: flex;
   justify-content: center;
   padding: 0 10px 10px 10px;
@@ -127,5 +122,15 @@ list-style: none;
 }
 
 .header-image {
-  margin: 15px 40px 0 0;
+ background-color: #cadbf7;
+ background-image: url("header.jpg");
+ background-position: center top;
+ background-repeat: no-repeat;
+ background-size: cover;
+ line-height: 1.2;
+ padding: 10vw 2em;
+ text-align: center;
+ float: left;
+ max-width: 80em;
+ opacity: .2;
 }

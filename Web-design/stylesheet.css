@@ -2,15 +2,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  flex-direction: column;
 }
 
 body {
-  background-color: #cadbf7;
-  margin: 0 auto;
-  max-width: 80em;
-  display: flex;
-  justify-content: space-around;
+  background-color: #5390f4;
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -23,29 +18,30 @@ body {
   }
 }
 
-}
 .header-container {
-  max-width: 90em;
-}
-
-.layout-container,
-.people-container {
   background-color: #5390f4;
   display: flex;
   justify-content: center;
-  padding: 0 10px 10px 10px;
+  padding: 40px 10px 10px 10px;
+  flex-wrap: wrap;
 }
 
 .title {
   font-family: Courier; sans-serif;
-  font-size: 3em;
+  font-size: 4.2em;
   font-weight: bold;
-  top: auto;
+  display: flex;
+  justify-content: center;
+  order: 3;
+  margin: 10px;
 }
 
 .main-question {
-  font-size: 1.75em;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
   padding-top: 20px;
+  order: 1;
   margin-top: 40px;
 }
 
@@ -54,10 +50,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
-
+  order: 2;
 }
- a:link {
-   color: #e8effc;
+
+ a {
+   margin-left: 10px;
  }
 
 a:link,
@@ -69,7 +66,12 @@ a:hover {
   color: #e8effc;
 }
 
-
+.layout-container {
+  background-color: #cadbf7;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
+}
 
 .features-list {
 list-style: none;
@@ -80,11 +82,17 @@ list-style: none;
   font-size: 2em;
   font-weight: bold;
   padding: 20px 0 20px 0;
-  font-family: Courier; sans-serif;
 }
 
 .layout-content {
-  padding: 20px 0 20px 10PX;
+  padding: 20px 20px 20px 0;
+}
+
+.people-container {
+  background-color: #cadbf7;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
 }
 
 .people-list {
@@ -105,7 +113,6 @@ list-style: none;
 .features-menu {
   color: #fff;
   background-color: #7e099b;
-  font-variant: small-caps;
   font-weight: bold;
   padding: 10px;
   text-align: center;
@@ -118,15 +125,5 @@ list-style: none;
 }
 
 .header-image {
- background-color: #cadbf7;
- background-image: url("header.jpg");
- background-position: center top;
- background-repeat: no-repeat;
- background-size: cover;
- line-height: 1.2;
- padding: 10vw 2em;
- text-align: center;
- float: left;
- max-width: 80em;
- opacity: .2;
+  margin: 15px 40px 0 0;
 }
